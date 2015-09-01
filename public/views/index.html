@@ -47,7 +47,7 @@
         <form ng-submit="submit()" id="search-form" role="form">
           <div class="form-group move-down">
               <label for="autocomplete">Enter Start Location</label>
-              <input type="text" class="form-control" ng-autocomplete ng-model="autocomplete" options="options" details="details"/>
+              <input type="text" class="form-control" ng-autocomplete ng-model="result" options="options" details="details"/>
           </div>
           <button type="submit" class="btn btn-primary">Start Adventure</button>
         </form>
@@ -60,7 +60,6 @@
   </div>
 
 {{autocomplete}}
-
 
 
 
