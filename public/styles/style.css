@@ -1,0 +1,13 @@
+body {
+  background-color: #F2F1EF;
+  margin: 0;
+  padding: 0;
+}
+
+#search-container {
+  padding: 45px 0 0 0;
+}
+
+#map-container {
+  padding: 45px 0 0 0;
+}
