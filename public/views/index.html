@@ -59,19 +59,19 @@
   </div>
   
   <div id="map-container">
-    <mapbox map-id="alex415.nb64ff6d" lat="37.774929" lng="-122.419416" zoom="11" width="80%">
+    <mapbox map-id="alex415.nb64ff6d" lat="37.774929" lng="-122.419416" zoom="11">
       <div ng-repeat="venue in bars.venues">
         <marker lat="{{venue.location.lat}}" lng="{{venue.location.lng}}" color="#39cccc" symbol="grocery">
-          {{venue.location.lat}}
+<!--           {{venue.location.lat}} -->
           <h1>{{venue.name}}</h1>
-          <p>{{venue.contact}}</p>
+          <p>{{venue.contact.formattedPhone}}</p>
           <p>{{venue.location.formattedAddress}}</p>
         </marker>
       </div>
     </mapbox>
   </div>
 
-<!--   {{bars}} -->
+  {{bars}}
 
 
 

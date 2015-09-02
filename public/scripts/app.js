@@ -1,4 +1,4 @@
-angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'angular-mapbox']).run(function(mapboxService) {
+angular.module('pubCrawl', ['ngAutocomplete', 'angular-mapbox']).run(function(mapboxService) {
   mapboxService.init({ accessToken: 'pk.eyJ1IjoiYWxleDQxNSIsImEiOiJmNWM4YzNjMmVmYzQyNjk1N2U1NzE2ZDIzZTU1YmFjMiJ9.Dl4FXdWAWmXKWKA4jTwCeA' });
 })
 
