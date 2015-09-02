@@ -7,6 +7,9 @@
   <!-- bootstrap css cdn -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css" rel="stylesheet">
 
+  <!-- mapbox style -->
+  <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+
   <!-- custom styles -->
   <link type="text/css" rel="stylesheet" href="styles/style.css">
   <link type="text/css" rel="stylesheet" href="styles/nav.css">
@@ -17,7 +20,7 @@
   <!-- google maps -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?&libraries=places&sensor=false"></script>
   <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
-
+  
   <!-- font awesome icons cdn -->
 
   <!-- google fonts -->
@@ -55,15 +58,19 @@
     </div>
   </div>
   
-  <div class="container" id="map-container">
-    <map center="-34.397, 150.644" zoom="8"></map>
+  <div id="map-container">
+    <mapbox map-id="alex415.nb64ff6d" lat="37.774929" lng="-122.419416" zoom="13" width="80%">
+      <div ng-repeat="venue in bars.venues">
+        <marker lat="{{venue.location.lat}}" lng="{{venue.location.lng}}" color="#39cccc" symbol="grocery">
+          {{venue.location.lat}}
+          <h1>{{market.name}}</h1>
+          <p>{{market.times}}</p>
+        </marker>
+      </div>
+    </mapbox>
   </div>
 
-{{autocomplete}}
-
-
-
-
+<!--   {{bars}} -->
 
 
 
@@ -75,6 +82,10 @@
 
   <!-- custom scripts -->
   <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/javascript" src="scripts/angular-mapbox.js"></script>
   <script type="text/javascript" src="scripts/ngAutocomplete.js"></script>
+
+  <!-- angular-mapbox -->
+  <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
 </body>
 </html>
