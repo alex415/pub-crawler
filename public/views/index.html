@@ -65,13 +65,26 @@
 <!--           {{venue.location.lat}} -->
           <h1>{{venue.name}}</h1>
           <p>{{venue.contact.formattedPhone}}</p>
-          <p>{{venue.location.formattedAddress}}</p>
+          <p>{{venue.location.formattedAddress.join(" ")}}</p>
         </marker>
       </div>
     </mapbox>
   </div>
 
-  {{bars}}
+  <div class="container" id="scroll-container">
+    <div clas="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div ng-repeat="venue in bars.venues" class="well">
+          <li><h4>{{venue.name}}</li></h4>
+          <p>{{venue.url}}</p>
+          <p>{{venue.contact.formattedPhone}}</p>
+          <p>{{venue.location.formattedAddress.join(" ")}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 
 
