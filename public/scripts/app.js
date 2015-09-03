@@ -10,9 +10,12 @@ angular.module('pubCrawl', ['ngAutocomplete', 'angular-mapbox']).run(function(ma
     $http.get(url)
       .then(function (response) {
         $scope.bars = response.data.response;
-        // console.log(response);
     });
   };
+
+
+
+  // https://api.foursquare.com/v2/venues/explore?ll=40.7,-74&client_id=0LQEK2QFONRMHNYOBLU4ZEMSGKGWAB5J51O4JB0DPYRNW41G&client_secret=JYZ2IHWEDEKK5A3HNQKO4ELARI55YOJP0LFOF1NFM3R3LY5Z&v=20150901&limit=10&section=drinks
 
 
 
