@@ -48,6 +48,12 @@ body {
 }
 
 ::-webkit-scrollbar-track { 
-    background-color: #fff; 
-    border-radius: 8px;
-} 
+  background-color: #fff; 
+  border-radius: 8px;
+}
+
+/*#map {
+  width: 636px;
+  height: 300px;
+  margin: 0 auto;
+}*/

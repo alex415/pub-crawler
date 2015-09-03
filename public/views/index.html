@@ -7,9 +7,6 @@
   <!-- bootstrap css cdn -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css" rel="stylesheet">
 
-  <!-- mapbox style -->
-  <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
-
   <!-- custom styles -->
   <link type="text/css" rel="stylesheet" href="styles/style.css">
   <link type="text/css" rel="stylesheet" href="styles/nav.css">
@@ -72,24 +69,21 @@
       </div> <!-- end column -->
 
       <div class="col-sm-8" id="map-info"> <!-- start column -->
-        <mapbox map-id="alex415.nb64ff6d" lat="37.774929" lng="-122.419416" zoom="11" width="100%">
-          <div ng-repeat="venue in bars.venues">
-            <marker lat="{{venue.location.lat}}" lng="{{venue.location.lng}}" color="#39cccc" icon="bar" symbol="bar">
+<!--       <map id="map" center="37.774929, -122.419416" zoom="8"></map> -->
+          <map id="map"></map>
+          <div ng-repeat="venues in bars.venue">
+<!--             <marker lat="{{venue.location.lat}}" lng="{{venue.location.lng}}" color="#39cccc" icon="bar" symbol="bar"> -->
               <h1>{{venue.name}}</h1>
               <p>{{venue.contact.formattedPhone}}</p>
               <p>{{venue.location.formattedAddress.join(" ")}}</p>
-            </marker>
+<!--             </marker> -->
           </div>
-        </mapbox>
       </div> <!-- end column -->
 
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
 
-
-
-
-
+<!-- {{bars}} -->
 
 
 
@@ -105,10 +99,8 @@
 
   <!-- custom scripts -->
   <script type="text/javascript" src="scripts/app.js"></script>
-  <script type="text/javascript" src="scripts/angular-mapbox.js"></script>
   <script type="text/javascript" src="scripts/ngAutocomplete.js"></script>
+  <script type="text/javascript" src="scripts/maps_lib.js"></script>
 
-  <!-- angular-mapbox -->
-  <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
 </body>
 </html>
