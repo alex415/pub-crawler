@@ -12,7 +12,7 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap'])
         $scope.bars = response.data.response.groups[0].items;
         
 
-        for (var i=0; i<$scope.bars.length; i++) {
+        for (var i=0; i < $scope.bars.length; i++) {
           markers[i] = new google.maps.Marker({
             title: "Hi marker " + i
           });
@@ -36,6 +36,7 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap'])
       markers[i].setPosition(latlng);
       markers[i].setMap($scope.map);
     }
-  };  
+  };
+  // $interval( $scope.GenerateMapMarkers, 2000);
 
 }]); // end

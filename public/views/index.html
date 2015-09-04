@@ -70,9 +70,9 @@
       </div> <!-- end column -->
 
       <div class="col-sm-8" id="map-info"> <!-- start column -->
-        <map id="map" ng-model="map">
+        <map id="map">
           <ng-repeat="bar in bars">
-            <marker position="[{{bar.venue.location.lat}}, {{bar.venue.location.lng}}]">
+            <marker position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
 <!--               <h1>{{bar.venue.name}}</h1>
               <p>{{bar.venue.contact.formattedPhone}}</p>
               <p>{{bar.venue.location.formattedAddress.join(" ")}}</p> -->
@@ -91,9 +91,12 @@
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- custom scripts -->
-  <script type="text/javascript" src="scripts/app.js"></script>
-  <script type="text/javascript" src="scripts/ngAutocomplete.js"></script>
   <script type="text/javascript" src="scripts/maps_lib.js"></script>
+  <script type="text/javascript" src="scripts/ngAutocomplete.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
+
+{{bars.length}}
+
 
 </body>
 </html>
