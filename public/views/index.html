@@ -36,11 +36,12 @@
 </head>
 
 <body ng-controller="MainCtrl">
-
+  
+  <!-- navbar -->
   <div class="container" id="nav-container"> <!-- start nav container -->
     <header class="main-header"> <!-- start header -->
       <a class="site-logo" href="/">
-        <img src="images/icon.png" style="width: 50%; height: 50%">
+        <img src="images/icon.png" style="width: 40%; height: 40%">
       </a>
       <ul class="nav"> <!-- nav links -->
         <li><a href="#">SEARCH</a></li>
@@ -49,7 +50,8 @@
       </ul>
     </header> <!-- end header -->
   </div> <!-- end nav container -->
-
+  
+  <!-- search -->
   <div class="container" id="search-container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -63,6 +65,7 @@
     </div>
   </div>
   
+  <!-- venue info -->
   <div class="container" id="main-container"> <!-- main container -->
     <div class="row"> <!-- main row -->
       <div class="col-sm-4" id="venue-container"> <!-- start column -->
@@ -73,23 +76,28 @@
           <p>{{bar.venue.location.formattedAddress.join(" ")}}</p>
         </div>
       </div> <!-- end column -->
-
+      
+      <!-- maps -->
       <div class="col-sm-8"> <!-- start column -->
         <map zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#890000'}]}]">
-          <marker ng-repeat="bar in bars" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}" on-click="showInfoWindow(event, 'marker-info')">
+          <marker ng-repeat="bar in bars" on-click="getInstagram(bar);" ng-click="showInfoWindow(event, 'marker-info')" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
           </marker>
-          <info-window ng-repeat="bar in bars" id="marker-info">
+      <!-- info window -->
+<!--           <info-window id="marker-info">
             <h4>{{bar.venue.name}}</h4>
-          </info-window>
+          </info-window> -->
+      <!-- polygon -->
+<!--           <shape ng-repeat="bar in bars" name="polygon" paths=
+                "[{{bar.venue.location.lat}},{{bar.venue.location.lng}}]"
+                stroke-color="#FF0000" stroke-opacity="0.8" stroke-weight="2" fill-color="#FF0000" fill-opacity="0.35">
+          </shape> -->
         </map>
       </div> <!-- end column -->
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
 
  <!--  {{bars}} -->
-
-
-
+ {{instagram}}
 
 </body>
 </html>
