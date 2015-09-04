@@ -16,11 +16,22 @@
   
   <!-- google maps -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?&libraries=places&sensor=false"></script>
-  <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
   
   <!-- font awesome icons cdn -->
 
   <!-- google fonts -->
+
+  <!-- jQuery cdn -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- bootstrap js cdn -->
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- custom scripts -->
+  <script type="text/javascript" src="scripts/maps_lib.js"></script>
+  <script type="text/javascript" src="scripts/ngMap.js"></script>
+  <script type="text/javascript" src="scripts/ngAutocomplete.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
 
   <title>Pub Crawl</title>
 </head>
@@ -33,8 +44,7 @@
         <img src="images/icon.png" style="width: 50%; height: 50%">
       </a>
       <ul class="nav"> <!-- nav links -->
-        <li><a href="#">NEW ROUTE</a></li>
-        <li><a href="#">SEARCH BARS</a></li>
+        <li><a href="#">SEARCH</a></li>
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">SIGN UP</a></li>
       </ul>
@@ -56,45 +66,25 @@
   
   <div class="container" id="main-container"> <!-- main container -->
     <div class="row"> <!-- main row -->
-
       <div class="col-sm-4" id="venue-container"> <!-- start column -->
         <div ng-repeat="bar in bars" class="well" id="venue-info">
           <li><h6><b>{{bar.venue.name}}</li></h6></b>
           <p>{{bar.venue.url}}</p>
           <p>{{bar.venue.contact.formattedPhone}}</p>
           <p>{{bar.venue.location.formattedAddress.join(" ")}}</p>
-          <!-- <p>{{bar.venue.location.lat}}</p>
-          <p>{{bar.venue.location.lng}}</p> -->
         </div>
       </div> <!-- end column -->
 
-      <div class="col-sm-8" id="map-info"> <!-- start column -->
-        <map id="map">
-          <ng-repeat="bar in bars">
-            <marker position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
-<!--               <h1>{{bar.venue.name}}</h1>
-              <p>{{bar.venue.contact.formattedPhone}}</p>
-              <p>{{bar.venue.location.formattedAddress.join(" ")}}</p> -->
-            </marker>
-          </ng-repeat>
-        </map>    
+      <div class="col-sm-8"> <!-- start column -->
+        <map center='san francisco' zoom='12' styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'water',stylers:[{color:'#890000'}]}]">
+          <marker ng-repeat='bar in bars' position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
+          </marker>
+        </map>
       </div> <!-- end column -->
-
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
 
-  <!-- jQuery cdn -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-  <!-- bootstrap js cdn -->
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-  <!-- custom scripts -->
-  <script type="text/javascript" src="scripts/maps_lib.js"></script>
-  <script type="text/javascript" src="scripts/ngAutocomplete.js"></script>
-  <script type="text/javascript" src="scripts/app.js"></script>
-
-{{bars.length}}
+ <!--  {{bars}} -->
 
 
 </body>

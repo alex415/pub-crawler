@@ -24,5 +24,3 @@ function init() {
   // Create the Google Map using our element and options defined above
   var map = new google.maps.Map(mapElement, mapOptions);
 }
-
-
