@@ -1,6 +1,7 @@
 angular.module('pubCrawl', ['ngAutocomplete', 'ngMap'])
 
 .controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
+  var markers = [];
 
   $scope.submit = function () {
     var geolocation = $scope.details.geometry.location.toString().replace(/\s+/, '').slice(1, -1);
@@ -9,16 +10,32 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap'])
       .then(function (response) {
         console.log(response.data.response.groups[0].items);
         $scope.bars = response.data.response.groups[0].items;
+        
+
+        for (var i=0; i<$scope.bars.length; i++) {
+          markers[i] = new google.maps.Marker({
+            title: "Hi marker " + i
+          });
+        }
+
+        $scope.GenerateMapMarkers();
     });
   };
 
-  $scope.maps = ['San Francisco'];
+  $scope.GenerateMapMarkers = function() {
+    $scope.date = Date(); // Just to show that we are updating
 
-  $scope.addMap = function() {
-      $scope.maps.push($scope.newMap);
-  };
-
-
-
+    var numMarkers = $scope.bars.length;  // betwween 4 & 8 of them
+    for (i = 0; i < numMarkers; i++) {
+      var lat = $scope.bars[i].venue.location.lat;
+      var lng = $scope.bars[i].venue.location.lng;
+      // You need to set markers according to google api instruction
+      // you don't need to learn ngMap, but you need to learn google map api v3
+      // https://developers.google.com/maps/documentation/javascript/marker
+      var latlng = new google.maps.LatLng(lat, lng);
+      markers[i].setPosition(latlng);
+      markers[i].setMap($scope.map);
+    }
+  };  
 
 }]); // end

@@ -55,41 +55,34 @@
     </div>
   </div>
   
-
   <div class="container" id="main-container"> <!-- main container -->
     <div class="row"> <!-- main row -->
 
       <div class="col-sm-4" id="venue-container"> <!-- start column -->
-        <div ng-repeat="venue in bars.venues" class="well" id="venue-info">
-          <li><h6><b>{{venue.name}}</li></h6></b>
-          <p>{{venue.url}}</p>
-          <p>{{venue.contact.formattedPhone}}</p>
-          <p>{{venue.location.formattedAddress.join(" ")}}</p>
+        <div ng-repeat="bar in bars" class="well" id="venue-info">
+          <li><h6><b>{{bar.venue.name}}</li></h6></b>
+          <p>{{bar.venue.url}}</p>
+          <p>{{bar.venue.contact.formattedPhone}}</p>
+          <p>{{bar.venue.location.formattedAddress.join(" ")}}</p>
+          <p>{{bar.venue.location.lat}}</p>
+          <p>{{bar.venue.location.lng}}</p>
         </div>
       </div> <!-- end column -->
 
       <div class="col-sm-8" id="map-info"> <!-- start column -->
-<!--       <map id="map" center="37.774929, -122.419416" zoom="8"></map> -->
-          <map id="map"></map>
-          <div ng-repeat="venues in bars.venue">
-<!--             <marker lat="{{venue.location.lat}}" lng="{{venue.location.lng}}" color="#39cccc" icon="bar" symbol="bar"> -->
-              <h1>{{venue.name}}</h1>
-              <p>{{venue.contact.formattedPhone}}</p>
-              <p>{{venue.location.formattedAddress.join(" ")}}</p>
-<!--             </marker> -->
-          </div>
+        <map id="map" ng-model="map">
+          <ng-repeat="bar in bars">
+            <marker position="[{{bar.venue.location.lat}}, {{bar.venue.location.lng}}]">
+<!--               <h1>{{bar.venue.name}}</h1>
+              <p>{{bar.venue.contact.formattedPhone}}</p>
+              <p>{{bar.venue.location.formattedAddress.join(" ")}}</p> -->
+            </marker>
+          </ng-repeat>
+        </map>    
       </div> <!-- end column -->
 
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
-
-<!-- {{bars}} -->
-
-
-
-
-
-
 
   <!-- jQuery cdn -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
