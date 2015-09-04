@@ -28,7 +28,6 @@
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- custom scripts -->
-  <script type="text/javascript" src="scripts/maps_lib.js"></script>
   <script type="text/javascript" src="scripts/ngMap.js"></script>
   <script type="text/javascript" src="scripts/ngAutocomplete.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
@@ -76,15 +75,20 @@
       </div> <!-- end column -->
 
       <div class="col-sm-8"> <!-- start column -->
-        <map center='san francisco' zoom='12' styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'water',stylers:[{color:'#890000'}]}]">
-          <marker ng-repeat='bar in bars' position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
+        <map zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#890000'}]}]">
+          <marker ng-repeat="bar in bars" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}" on-click="showInfoWindow(event, 'marker-info')">
           </marker>
+          <info-window ng-repeat="bar in bars" id="marker-info">
+            <h4>{{bar.venue.name}}</h4>
+          </info-window>
         </map>
       </div> <!-- end column -->
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
 
  <!--  {{bars}} -->
+
+
 
 
 </body>

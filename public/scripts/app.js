@@ -37,7 +37,7 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap'])
     }
   };
 
-  $scope.Instagram = function () {
+  $scope.instagram = function () {
     // instagram api call
     var lat = '';
     var lng = '';
