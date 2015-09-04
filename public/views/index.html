@@ -30,7 +30,7 @@
   <div class="container" id="nav-container"> <!-- start nav container -->
     <header class="main-header"> <!-- start header -->
       <a class="site-logo" href="/">
-        <img src="images/icon.svg" alt="Poly - UI Toolkit">
+        <img src="images/icon.png" style="width: 50%; height: 50%">
       </a>
       <ul class="nav"> <!-- nav links -->
         <li><a href="#">NEW ROUTE</a></li>
@@ -46,10 +46,9 @@
       <div class="col-md-6 col-md-offset-3">
         <form ng-submit="submit()" id="search-form" role="form">
           <div class="form-group move-down">
-              <label for="autocomplete">Enter Start Location</label>
-              <input type="text" class="form-control" ng-autocomplete ng-model="result" options="options" details="details"/>
+            <input type="text" class="form-control" ng-autocomplete ng-model="result" options="options" details="details">
           </div>
-          <button type="submit" class="btn btn-primary">Start Adventure</button>
+          <button type="submit" class="btn btn-primary" id="main-button">START THE CRAWL</button>
         </form>
       </div>
     </div>
