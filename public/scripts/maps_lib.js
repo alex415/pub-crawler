@@ -6,14 +6,15 @@ function init() {
   // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
   var mapOptions = {
     // How zoomed in you want the map to start at (always required)
-    zoom: 11,
+    zoom: 12,
 
     // The latitude and longitude to center the map (always required)
     center: new google.maps.LatLng(37.774929, -122.419416),
 
     // How you would like to style the map. 
     // This is where you would paste any style found on Snazzy Maps.
-    styles: [{"featureType":"all","stylers":[{"saturation":-70},{"gamma":0.9}]}]
+    // styles: [{"featureType":"all","stylers":[{"saturation":-70},{"gamma":0.9}]}]
+    styles: [{"elementType":"all","stylers":[{"visibility":"simplified"},{"hue":"#ff0000"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"administrative","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"off"}]}]
   };
 
   // Get the HTML DOM element that will contain your map.
@@ -23,3 +24,5 @@ function init() {
   // Create the Google Map using our element and options defined above
   var map = new google.maps.Map(mapElement, mapOptions);
 }
+
+
