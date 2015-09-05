@@ -18,12 +18,7 @@ body {
   padding-bottom: 45px;
 }
 
-#main-container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-#venue-container {
+#venue-column {
   padding-left: 0px;
   padding-right: 0px;
 
@@ -32,12 +27,24 @@ body {
   overflow: scroll;
 }
 
-#venue-info {
+#map-column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#venue-repeat {
   font-size: 12px;
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
+.row {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/*======= Button Styling ============*/
 
 #main-button {
   background-color: #464646;
@@ -61,12 +68,16 @@ body {
   color: #ffffff; 
   background-color: #464646; 
   border-color: #DE4F4F;
-} 
+}
+
+/*======= Form Styling ============*/
 
 textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
   border-color: rgba(70, 70, 70, 1);
   box-shadow: 0 1px 1px rgba(222, 79, 79, 1) inset, 0 0 8px rgba(222, 79, 79, 1);
 }
+
+/*======= Scroll Bar Styling ============*/
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -83,4 +94,16 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 ::-webkit-scrollbar-track { 
   background-color: #fff; 
   /*border-radius: 8px;*/
+}
+
+/*======= Map Styling ============*/
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
 }

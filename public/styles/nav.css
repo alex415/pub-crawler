@@ -1,6 +1,5 @@
-/* - - - - - - - - - - - - - - - - -
-  Main Styles
-- - - - - - - - - - - - - - - - - */
+/*======= Navbar Styling ============*/
+
 #nav-container {
   width: 100%;
   padding: 0;
@@ -52,10 +51,7 @@
   background-color: #27272A;
 }
 
-
-/* - - - - - - - - - - - - - - - - -
-  Media Queries
-- - - - - - - - - - - - - - - - - */
+/*======= Media Queries ============*/
 
 @media (min-width: 769px) {
   .main-header {

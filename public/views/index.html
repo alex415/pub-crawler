@@ -65,11 +65,13 @@
     </div>
   </div>
   
-  <!-- venue info -->
-  <div class="container" id="main-container"> <!-- main container -->
+  <!-- main -->
+  <div class="container"> <!-- main container -->
     <div class="row"> <!-- main row -->
-      <div class="col-sm-4" id="venue-container"> <!-- start column -->
-        <div ng-repeat="bar in bars" class="well" id="venue-info">
+
+      <!-- left view -->
+      <div class="col-sm-4" id="venue-column"> <!-- start column -->
+        <div ng-repeat="bar in bars" class="well" id="venue-repeat">
           <li><h6><b>{{bar.venue.name}}</li></h6></b>
           <p>{{bar.venue.url}}</p>
           <p>{{bar.venue.contact.formattedPhone}}</p>
@@ -78,7 +80,7 @@
       </div> <!-- end column -->
       
       <!-- maps -->
-      <div class="col-sm-8"> <!-- start column -->
+      <div class="col-sm-8" id="map-column"> <!-- start column -->
         <map zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#890000'}]}]">
           <marker ng-repeat="bar in bars" on-click="getInstagram(bar);" ng-click="showInfoWindow(event, 'marker-info')" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
           </marker>
@@ -86,6 +88,7 @@
           <marker position="{{startLocation}}" visible="true" icon="images/start.svg"></marker>
         </map>
       </div> <!-- end column -->
+
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
 
