@@ -84,21 +84,3 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
   background-color: #fff; 
   /*border-radius: 8px;*/
 }
-
-/*maps polyline*/
-div[ng-controller=PolylineRemoveCtrl] {
-  position: relative;
-}
-div[ng-controller=PolylineRemoveCtrl] #panel {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  margin-left: -90px;
-  z-index: 5;
-  background-color: #fff;
-  padding: 5px;
-  border: 1px solid #999;
-}
-
-/*info window*/
-map, div[map] {display:block; width:600px; height:400px;}
