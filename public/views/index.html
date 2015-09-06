@@ -71,7 +71,7 @@
 
       <!-- left view -->
       <div class="col-sm-4" id="venue-column"> <!-- start column -->
-        <div ng-repeat="bar in bars" class="well" id="venue-repeat">
+        <div ng-repeat="bar in bars" ng-click="getPictures(bar)" class="well" id="venue-repeat">
           <li><h6><b>{{bar.venue.name}}</li></h6></b>
           <p>{{bar.venue.url}}</p>
           <p>{{bar.venue.contact.formattedPhone}}</p>
@@ -79,10 +79,11 @@
         </div>
       </div> <!-- end column -->
       
-      <!-- maps -->
+      <!-- map -->
       <div class="col-sm-8" id="map-column"> <!-- start column -->
-        <map zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#890000'}]}]">
-          <marker ng-repeat="bar in bars" on-click="getInstagram(bar);" ng-click="showInfoWindow(event, 'marker-info')" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
+        <map id="map" zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#890000'}]}]">
+          <!-- markers -->
+          <marker ng-repeat="bar in bars" on-click="" ng-click="showInfoWindow(event, 'marker-info')" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
           </marker>
           <shape name="circle" radius="500" center="{{startLocation}}" radius="1000"></shape>
           <marker position="{{startLocation}}" visible="true" icon="images/start.svg"></marker>
@@ -92,8 +93,17 @@
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
 
- <!--  {{bars}} -->
-<!--  {{instagram}} -->
+<!--   {{bars}} -->
+<!--   {{pictures}} -->
+
+<div class="container">
+  <div class="row">
+    <div ng-repeat="picture in pictures" class="col-md-2">
+      <img src="{{picture.prefix}}185x185{{picture.suffix}}" id="main-images">
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>
