@@ -14,7 +14,7 @@ app.get('/landing', function (req, res) {
   res.sendFile(__dirname + '/public/views/landing.html');
 });
 
-// landing page route
+// about page route
 app.get('/about', function (req, res) {
   res.sendFile(__dirname + '/public/views/about.html');
 });

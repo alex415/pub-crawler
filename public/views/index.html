@@ -32,7 +32,7 @@
   <script type="text/javascript" src="scripts/ngAutocomplete.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
 
-  <title>Pub Crawl</title>
+  <title>Pub Crawler</title>
 </head>
 
 <body ng-controller="MainCtrl">
@@ -44,8 +44,8 @@
         <img src="images/icon.png" style="width: 40%; height: 40%">
       </a>
       <ul class="nav"> <!-- nav links -->
-        <li><a href="#">SEARCH</a></li>
-        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CRAWL METER</a></li>
+        <li><a href="/about">ABOUT</a></li>
         <li><a href="#">SIGN UP</a></li>
       </ul>
     </header> <!-- end header -->
@@ -70,17 +70,17 @@
     <div class="row"> <!-- main row -->
 
       <!-- left view -->
-      <div class="col-sm-4" id="venue-column"> <!-- start column -->
+      <div class="col-xs-4" id="venue-column"> <!-- start column -->
         <div ng-repeat="bar in bars" ng-click="getPictures(bar)" class="well" id="venue-repeat">
           <li><h6><b>{{bar.venue.name}}</li></h6></b>
-          <p>{{bar.venue.url}}</p>
+          <a href="{{bar.venue.url}}"><p>{{bar.venue.url}}</a></p>
           <p>{{bar.venue.contact.formattedPhone}}</p>
           <p>{{bar.venue.location.formattedAddress.join(" ")}}</p>
         </div>
       </div> <!-- end column -->
       
       <!-- map -->
-      <div class="col-sm-8" id="map-column"> <!-- start column -->
+      <div class="col-xs-8" id="map-column"> <!-- start column -->
         <map id="map" zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#890000'}]}]">
           <!-- markers -->
           <marker ng-repeat="bar in bars" on-click="" ng-click="showInfoWindow(event, 'marker-info')" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
@@ -96,7 +96,7 @@
 <!--   {{bars}} -->
 <!--   {{pictures}} -->
 
-<div class="container">
+<div class="container" id="pictures-container">
   <div class="row">
     <div ng-repeat="picture in pictures" class="col-md-2">
       <img src="{{picture.prefix}}185x185{{picture.suffix}}" id="main-images">

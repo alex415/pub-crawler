@@ -23,7 +23,7 @@ body {
   padding-right: 0px;
 
   width: 370px;
-  height: 600px;
+  height: 500px;
   overflow: scroll;
 }
 
@@ -50,11 +50,22 @@ body {
 }
 
 #main-images {
-  border: 2px solid #BFBFBF;
+/*  border: 2px solid #BFBFBF;*/
   box-shadow: box-shadow;
-  border-radius: 20px;
-  background-color: white;
+/*  border-radius: 10px;*/
+/*  background-color: white;*/
   margin-left: -15px;
+
+}
+
+#pictures-container {
+  padding-left: 0px;
+  padding-right: 0px;
+
+
+  width: 1110px;
+  height: 500px;
+  overflow: scroll;
 }
 
 /*======= Button Styling ============*/
@@ -112,7 +123,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 /*======= Map Styling ============*/
 
 #map {
-  height: 600px;
+  height: 500px;
 }
 
 a[href^="http://maps.google.com/maps"]{display:none !important}
@@ -133,7 +144,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 
 #landing-body {
-  background-image: url(images/background.png);
+  background-image: url(/images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
