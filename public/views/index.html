@@ -93,13 +93,13 @@
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
 
-<!--   {{bars}} -->
+<!--   {{bars.venues.photos}} -->
 <!--   {{pictures}} -->
 
 <div class="container" id="pictures-container">
   <div class="row">
     <div ng-repeat="picture in pictures" class="col-md-2">
-      <img src="{{picture.prefix}}185x185{{picture.suffix}}" id="main-images">
+      <img ng-src="{{picture.prefix}}185x185{{picture.suffix}}" id="main-images">
     </div>
   </div>
 </div>

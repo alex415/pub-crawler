@@ -136,7 +136,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     background:none !important;
 }
 
-/*======= Splash Page Styling ============*/
+/*======= Landing Page Styling ============*/
 
 #landing-html,
 #landing-body {
@@ -147,4 +147,16 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
   background-image: url(/images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/*color: white;
+text-shadow: black 0.3em 0.3em 0.3em;*/
+
+#header1 {
+  padding-top: 5em;
+  letter-spacing: 2.5px;
+  font-size: 3em;
+  margin-bottom: 0px;
+  color: black;
+  text-shadow: 1px 1px 1px #aaa;
 }

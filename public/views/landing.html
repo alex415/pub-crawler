@@ -36,21 +36,23 @@
 </head>
 <body id="landing-body">
 
-<center><h1>Pub Crawler</h1></center>
+<center><div id="header1">Pub Crawler</div></center>
 
 <!-- search -->
-<div class="container" id="search-container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <form ng-submit="submit()" id="search-form" role="form">
-        <div class="form-group move-down">
-          <input type="text" class="form-control" ng-autocomplete ng-model="result" options="options" details="details">
-        </div>
-        <button type="submit" class="btn btn-primary" id="main-button">START THE CRAWL</button>
-      </form>
+<center>
+  <div class="container" id="search-container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form ng-submit="submit()" id="search-form" role="form">
+          <div class="form-group move-down">
+            <input type="text" class="form-control" ng-autocomplete ng-model="result" options="options" details="details">
+          </div>
+          <button type="submit" class="btn btn-primary" id="main-button">START THE CRAWL</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</center>
   
 </body>
 </html>
