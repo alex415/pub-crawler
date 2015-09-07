@@ -3,7 +3,10 @@
 }
 
 body {
-  background-color: #464646;
+  background-image: url(/images/chalkboard_webtile_light.jpg);
+/*  background-repeat: repeat-y;*/
+/*  background-size: cover;*/
+/*  background-color: #464646;*/
   margin: 0;
   padding: 0;
 }
@@ -16,13 +19,15 @@ body {
 #search-container {
   padding-top: 45px;
   padding-bottom: 45px;
+  text-align:center;
+  width: 600px;
 }
 
 #venue-column {
   padding-left: 0px;
   padding-right: 0px;
 
-  width: 370px;
+/*  width: 370px;*/
   height: 500px;
   overflow: scroll;
 }
@@ -82,10 +87,6 @@ body {
   -moz-transition:    color .55s;
   -ms-transition:     color .55s;
   -o-transition:      color .55s;
-  /*transition:         color .55s;
-  transition-duration: .55s;
-  -webkit-transition-duration: .55s;
-  -moz-transition-duration: .55s;*/
 }
 
 .btn-sample { 
@@ -144,13 +145,10 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 
 #landing-body {
-  background-image: url(/images/background.jpg);
+  background-image: url(/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/*color: white;
-text-shadow: black 0.3em 0.3em 0.3em;*/
 
 #header1 {
   padding-top: 5em;
@@ -159,4 +157,6 @@ text-shadow: black 0.3em 0.3em 0.3em;*/
   margin-bottom: 0px;
   color: black;
   text-shadow: 1px 1px 1px #aaa;
+  /*color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;*/
 }

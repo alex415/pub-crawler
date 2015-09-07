@@ -53,21 +53,3 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap'])
     }); // end of url
   };
 }]); // end
-
-// $scope.getInstagram = function (bar) {
-//   // instagram api call
-//   var foursquareId = bar.venue.id;
-//   // console.log(bar.venue.id);
-//   var url = 'https://api.instagram.com/v1/locations/search?foursquare_v2_id=' + foursquareId + '&client_id=58d7ef2ba19c481f84f6b8c3c2dbe895&callback=JSON_CALLBACK';
-//   $http.jsonp(url)
-//     .then(function (response) {
-//       var instagramId = response.data.data[0].id;
-//       // console.log(instagramId);
-//   var url2 = 'https://api.instagram.com/v1/media/' + instagramId + '?client_id=58d7ef2ba19c481f84f6b8c3c2dbe895&callback=JSON_CALLBACK';
-//   $http.jsonp(url2)
-//     .then(function (response) {
-//       // console.log(response);
-//       $scope.instagram = response;
-//   }); // end of url2
-//   }); // end of url
-// };

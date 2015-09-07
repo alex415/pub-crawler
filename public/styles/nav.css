@@ -11,7 +11,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-/*  padding-top: .5em;*/
 }
 
 .main-header {
@@ -22,13 +21,11 @@
 }
 
 .site-logo {
-  width: 110px;
   align-self: center;
-  margin-left: 100px;
 }
 
 .nav {
-  margin-top: 1.5em;
+/*  margin-top: 1.5em;*/
 }
 
 .nav a {
@@ -59,10 +56,9 @@
     justify-content: flex-end;
   }
   .site-logo {
-    width: 140px;
+    align-self: center;
   }
   .nav {
-    margin-top: 3em;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -73,10 +69,10 @@
 
 @media (min-width: 1025px) {
   .main-header {
-    flex-direction: row; align-items:
+/*    flex-direction: row; align-items:*/
   }
   .site-logo {
-    margin-right: auto;
+    align-self: center;
   }
   .nav {
     margin-top: 0;

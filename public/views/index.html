@@ -41,12 +41,10 @@
   <div class="container" id="nav-container"> <!-- start nav container -->
     <header class="main-header"> <!-- start header -->
       <a class="site-logo" href="/">
-        <img src="images/icon.png" style="width: 40%; height: 40%">
+        <img src="images/icon.png" style="width:80px">
       </a>
       <ul class="nav"> <!-- nav links -->
-        <li><a href="#">CRAWL METER</a></li>
-        <li><a href="/about">ABOUT</a></li>
-        <li><a href="#">SIGN UP</a></li>
+<!--         <li><a href="/about">ABOUT</a></li> -->
       </ul>
     </header> <!-- end header -->
   </div> <!-- end nav container -->
@@ -54,14 +52,14 @@
   <!-- search -->
   <div class="container" id="search-container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+<!--       <div class="col-sm-6"> -->
         <form ng-submit="submit()" id="search-form" role="form">
           <div class="form-group move-down">
             <input type="text" class="form-control" ng-autocomplete ng-model="result" options="options" details="details">
           </div>
           <button type="submit" class="btn btn-primary" id="main-button">START THE CRAWL</button>
         </form>
-      </div>
+<!--       </div> -->
     </div>
   </div>
   
@@ -92,7 +90,7 @@
 
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
-
+  <img src="/images/logo1.png">
 <!--   {{bars.venues.photos}} -->
 <!--   {{pictures}} -->
 
