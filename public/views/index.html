@@ -41,7 +41,7 @@
   <div class="container" id="nav-container"> <!-- start nav container -->
     <header class="main-header"> <!-- start header -->
       <a class="site-logo" href="/">
-        <img src="images/logo.png" style="width:120px">
+        <img src="images/logo.png" style="width:140px">
       </a>
       <ul class="nav"> <!-- nav links -->
 <!--         <li><a href="/about">ABOUT</a></li> -->
@@ -50,65 +50,65 @@
   </div> <!-- end nav container -->
   
 
- <div class="container"> <!-- start of master container -->
-  
-  <!-- search -->
-  <div class="container" id="search-container">
-    <div class="row">
-      <form ng-submit="submit()" id="search-form" role="form">
-        <div class="form-group move-down">
-          <input type="text" class="form-control" ng-autocomplete ng-model="result" options="options" details="details" style="width: 500px">
-        </div>
-        <button type="submit" class="btn btn-primary" id="main-button">START THE CRAWL</button>
-      </form>
+  <div class="container"> <!-- start of master container -->
+    
+    <!-- search -->
+    <div class="container" id="search-container">
+      <div class="row">
+        <form ng-submit="submit()" id="search-form" role="form">
+          <div class="form-group move-down">
+            <input type="text" class="form-control" ng-autocomplete ng-model="result" options="options" details="details" style="width: 500px">
+          </div>
+          <button type="submit" class="btn btn-primary" id="main-button">START THE CRAWL</button>
+        </form>
+      </div>
     </div>
-  </div>
-  
-  <!-- main -->
-  <div class="container"> <!-- main container -->
-    <div class="row"> <!-- main row -->
+    
+    <!-- main -->
+    <div class="container"> <!-- main container -->
+      <div class="row"> <!-- main row -->
 
-      <!-- left view -->
-      <div class="col-xs-4" id="venue-column"> <!-- start column -->
-        <div ng-repeat="bar in bars" ng-click="getPictures(bar)" class="well" id="venue-repeat">
-          <li><h6><b>{{bar.venue.name}}</li></h6></b>
-          <a href="{{bar.venue.url}}"><p>{{bar.venue.url}}</a></p>
-          <p>{{bar.venue.contact.formattedPhone}}</p>
-          <p>{{bar.venue.location.formattedAddress.join(" ")}}</p>
-        </div>
-      </div> <!-- end column -->
+        <!-- left view -->
+        <div class="col-xs-4" id="venue-column"> <!-- start column -->
+          <div ng-repeat="bar in bars" ng-click="getPictures(bar)" class="well" id="venue-repeat">
+            <li><h6><b>{{bar.venue.name}}</li></h6></b>
+            <a href="{{bar.venue.url}}"><p>{{bar.venue.url}}</a></p>
+            <p>{{bar.venue.contact.formattedPhone}}</p>
+            <p>{{bar.venue.location.formattedAddress.join(" ")}}</p>
+          </div>
+        </div> <!-- end column -->
 
-    <!-- map -->  
-    <div class="container">
-      <div class="col-xs-8" id="map-column"> <!-- start column -->
-        <map id="map" zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#B8152D'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#B8152D'}]}]">
-          <!-- markers -->
-          <marker ng-repeat="bar in bars" on-click="" ng-click="showInfoWindow(event, 'marker-info')" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
-          </marker>
-          <shape name="circle" radius="500" center="{{startLocation}}" radius="1000"></shape>
-          <marker position="{{startLocation}}" visible="true" icon="images/start.svg"></marker>
-        </map>
-      </div> <!-- end column -->
-    </div>
+      <!-- map -->  
+      <div class="container">
+        <div class="col-xs-8" id="map-column"> <!-- start column -->
+          <map id="map" zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#B8152D'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#B8152D'}]}]">
+            <!-- markers -->
+            <marker ng-repeat="bar in bars" on-click="" ng-click="showInfoWindow(event, 'marker-info')" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
+            </marker>
+            <shape name="circle" radius="500" center="{{startLocation}}" radius="1000"></shape>
+            <marker position="{{startLocation}}" visible="true" icon="images/start.svg"></marker>
+          </map>
+        </div> <!-- end column -->
+      </div>
 
-    </div> <!-- end of main row -->
-  </div> <!-- end of main container -->
+      </div> <!-- end of main row -->
+    </div> <!-- end of main container -->
 
-  <div class="container" id="foursquare-pictures">
-    <div class="container" id="pictures-container">
-      <div class="row" id="pictures-row">
-        <div class="col-lg-12">
-          <div class="cover-container">
-            <div ng-repeat="picture in pictures" class="cover-item">
-              <img ng-src="{{picture.prefix}}183x183{{picture.suffix}}">
+    <div class="container" id="foursquare-pictures">
+      <div class="container" id="pictures-container">
+        <div class="row" id="pictures-row">
+          <div class="col-lg-12">
+            <div class="cover-container">
+              <div ng-repeat="picture in pictures" class="cover-item">
+                <img ng-src="{{picture.prefix}}183x183{{picture.suffix}}">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-</div> <!-- end of master container -->
+  </div> <!-- end of master container -->
 
   <br><br>
 

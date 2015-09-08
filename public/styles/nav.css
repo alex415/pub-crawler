@@ -14,8 +14,8 @@
 }
 
 .main-header {
-/*  padding-top: .5em;
-  padding-bottom: .5em;*/
+  padding-top: 1em;
+  padding-bottom: 1em;
   background: transparent; //
   border: 1px solid #ccc; //
 }
