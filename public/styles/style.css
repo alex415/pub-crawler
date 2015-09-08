@@ -114,30 +114,24 @@ body {
 /*======= Button Styling ============*/
 
 #main-button {
-  background-color: #464646;
-  border: .1em solid #de4f4f;
+  background-color: transparent;
+  border: .1em solid #FFFFFF;
 }
 
 #main-button:hover {
   color: #ffffff;
-  background: #DE4F4F;
+  background: #B8152D;
   -webkit-transition: color .55s;
   -moz-transition:    color .55s;
   -ms-transition:     color .55s;
   -o-transition:      color .55s;
 }
 
-.btn-sample { 
-  color: #ffffff; 
-  background-color: #464646; 
-  border-color: #DE4F4F;
-}
-
 /*======= Form Styling ============*/
 
 textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
   border-color: rgba(70, 70, 70, 1);
-  box-shadow: 0 1px 1px rgba(222, 79, 79, 1) inset, 0 0 8px rgba(222, 79, 79, 1);
+  box-shadow: 0 1px 1px rgba(184, 21, 45, 1) inset, 0 0 8px rgba(184, 21, 45, 1);
 }
 
 /*======= Scroll Bar Styling ============*/
