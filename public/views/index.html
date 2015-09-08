@@ -41,13 +41,16 @@
   <div class="container" id="nav-container"> <!-- start nav container -->
     <header class="main-header"> <!-- start header -->
       <a class="site-logo" href="/">
-        <img src="images/logo.png" style="width:80px">
+        <img src="images/logo.png" style="width:120px">
       </a>
       <ul class="nav"> <!-- nav links -->
 <!--         <li><a href="/about">ABOUT</a></li> -->
       </ul>
     </header> <!-- end header -->
   </div> <!-- end nav container -->
+  
+
+ <div class="container"> <!-- start of master container -->
   
   <!-- search -->
   <div class="container" id="search-container">
@@ -74,8 +77,9 @@
           <p>{{bar.venue.location.formattedAddress.join(" ")}}</p>
         </div>
       </div> <!-- end column -->
-      
-      <!-- map -->
+
+    <!-- map -->  
+    <div class="container">
       <div class="col-xs-8" id="map-column"> <!-- start column -->
         <map id="map" zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#B8152D'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#B8152D'}]}]">
           <!-- markers -->
@@ -85,6 +89,7 @@
           <marker position="{{startLocation}}" visible="true" icon="images/start.svg"></marker>
         </map>
       </div> <!-- end column -->
+    </div>
 
     </div> <!-- end of main row -->
   </div> <!-- end of main container -->
@@ -103,8 +108,9 @@
     </div>
   </div>
 
-  <br>
-  <br>
+</div> <!-- end of master container -->
+
+  <br><br>
 
 </body>
 </html>

@@ -25,11 +25,6 @@ body {
  margin: 0 !important;
 }
 
-.row {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
 .form-control {
   margin: auto;
 }
@@ -58,6 +53,7 @@ body {
 #map-column {
   padding-left: 0;
   padding-right: 0;
+  padding-right: 10px;
 }
 
 #venue-repeat {

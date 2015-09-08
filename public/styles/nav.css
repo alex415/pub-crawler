@@ -16,7 +16,7 @@
 .main-header {
 /*  padding-top: .5em;
   padding-bottom: .5em;*/
-  background: #FFFFFF; //
+  background: transparent; //
   border: 1px solid #ccc; //
 }
 
