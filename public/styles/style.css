@@ -52,7 +52,7 @@ body {
 
 /*  width: 370px;*/
   height: 500px;
-  overflow: scroll;
+  overflow-x: auto;
 }
 
 #map-column {
@@ -100,13 +100,13 @@ body {
   height: 183px;
   width: auto;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 }
 .cover-item {
   display: inline-block;
   margin: 8px 8px;
-  box-shadow: 2px 2px 4px #bbb;
+/*  box-shadow: 2px 2px 4px #bbb;*/
   width: 183px;
   height: 183px;
 }
@@ -142,7 +142,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 
 /*======= Scroll Bar Styling ============*/
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
   height: 7px;
@@ -155,7 +155,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 
 ::-webkit-scrollbar-track { 
   background-color: #fff; 
-}
+}*/
 
 /*======= Map Styling ============*/
 
