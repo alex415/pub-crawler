@@ -45,10 +45,10 @@
         <div class="col-xs-8" id="map-column"> <!-- start column -->
           <map id="map" zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#ded7c6'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#ded7c6'}]}]">
             <!-- markers -->
-            <marker ng-repeat="bar in bars" on-click="showInfoWindow(event, bar)" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}">
+            <marker ng-repeat="bar in bars" on-click="showInfoWindow(event, bar)" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}" icon="images/mapicon.png">
             </marker>
             <shape name="circle" radius="500" center="{{startLocation}}" radius="1000"></shape>
-            <marker position="{{startLocation}}" visible="true" icon="images/start.svg"></marker>
+            <marker position="{{startLocation}}" visible="true" icon="images/start.png"></marker>
           </map>
         </div> <!-- end column -->
       </div>
