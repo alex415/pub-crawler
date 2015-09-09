@@ -69,8 +69,8 @@ body {
 }
 
 #venue-repeat:hover {
-  -webkit-box-shadow: inset 0 0 1em rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 0 0 1em rgba(0, 0, 0, 1);
+  -webkit-box-shadow: inset 0 0 1em rgba(18, 12, 8, .6);
+  -moz-box-shadow: inset 0 0 1em rgba(18, 12, 8, .6);
 }
 
 /*======= Horizontal Picture Styling ============*/
