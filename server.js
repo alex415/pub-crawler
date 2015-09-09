@@ -4,7 +4,7 @@ var express = require('express'),
 // serve js and css files from public folder
 app.use(express.static(__dirname + '/public'));
 
-// serve static files
+// serve index file
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/public/views/index.html');
 });
