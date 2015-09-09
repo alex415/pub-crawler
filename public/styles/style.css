@@ -64,8 +64,8 @@ body {
 }
 
 #venue-repeat:hover {
-  -webkit-box-shadow: inset 0 0 1em rgba(222, 79, 79, 1);
-  -moz-box-shadow: inset 0 0 1em rgba(222, 79, 79, 1);
+  -webkit-box-shadow: inset 0 0 1em rgba(214, 140, 18, 1);
+  -moz-box-shadow: inset 0 0 1em rgba(214, 140, 18, 1);
 }
 
 /*======= Horizontal Picture Styling ============*/
@@ -116,7 +116,7 @@ body {
 
 #main-button:hover {
   color: #ffffff;
-  background: #B8152D;
+  background: #D68C12;
   -webkit-transition: color .55s;
   -moz-transition:    color .55s;
   -ms-transition:     color .55s;
@@ -127,7 +127,7 @@ body {
 
 textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
   border-color: rgba(70, 70, 70, 1);
-  box-shadow: 0 1px 1px rgba(184, 21, 45, 1) inset, 0 0 8px rgba(184, 21, 45, 1);
+  box-shadow: 0 1px 1px rgba(214, 140, 18, 1) inset, 0 0 8px rgba(214, 140, 18, 1);
 }
 
 /*======= Scroll Bar Styling ============*/
