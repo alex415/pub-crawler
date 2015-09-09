@@ -76,7 +76,8 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
     var center = new google.maps.LatLng(bar.venue.location.lat,bar.venue.location.lng);
 
     $scope.infowindow.setContent(
-      '<h7>' + bar.venue.name + '</h7>');    
+      '<small>' + bar.venue.name + '</small>' + '<br>' +
+      '<small>' + bar.venue.location.formattedAddress.join(" ") + '</small>');
 
     $scope.infowindow.setPosition(center);
     $scope.infowindow.open($scope.objMapa);
