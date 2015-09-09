@@ -21,8 +21,8 @@ body {
 }
 
 .nopadding {
- padding: 0 !important;
- margin: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .form-control {
@@ -36,7 +36,7 @@ body {
   padding-bottom: 20px;
   text-align: center;
   width: 100%;
-  background-color: #B8152D;
+  background-color: transparent;
 }
 
 /*======= Main Content Styling ============*/
@@ -157,39 +157,8 @@ a[href^="http://maps.google.com/maps"]{display:none !important}
 a[href^="https://maps.google.com/maps"]{display:none !important}
 
 .gmnoprint a, .gmnoprint span, .gm-style-cc {
-    display:none;
+  display:none;
 }
 .gmnoprint div {
-    background:none !important;
-}
-
-/*======= Landing Page Styling ============*/
-
-#landing-body { 
-  background: url(/images/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 100%;
-  min-width: 100%;
-}
-
-#header1 {
-  font-family: brewmaster;
-  letter-spacing: 2px;
-  font-size: 5em;
-  color: white;
-  /*  text-shadow: 1px 1px 1px #black;*/
-  /*  text-shadow: black 0.3em 0.3em 0.3em;*/
-}
-
-#landing-logo {
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-#landing-search {
-  text-align: center;
-  width: 100%;
+  background:none !important;
 }

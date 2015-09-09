@@ -9,16 +9,6 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/public/views/index.html');
 });
 
-// landing page route
-app.get('/landing', function (req, res) {
-  res.sendFile(__dirname + '/public/views/landing.html');
-});
-
-// about page route
-app.get('/about', function (req, res) {
-  res.sendFile(__dirname + '/public/views/about.html');
-});
-
 // listen on port 3000
 app.listen(process.env.PORT || 3000, function () {
   console.log('server started on localhost:3000');
