@@ -1,23 +1,23 @@
 angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
 
 .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/templates/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/templates/about.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-      
-      $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-      });
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/templates/main.html',
+      controller: 'MainCtrl'
+    })
+    .when('/about', {
+      templateUrl: 'views/templates/about.html',
+      controller: 'MainCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+    
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
   }])
 
 .controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
