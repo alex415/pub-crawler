@@ -30,7 +30,7 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
     // start icon location
     var geolocation = $scope.details.geometry.location.toString().replace(/\s+/, '').slice(1, -1);
 
-    // foursquare api call
+    // send location to foursquare
     $scope.startLocation = $scope.details.geometry.location.toString().replace(/\s+/, '').slice(1, -1);
     var url = 'https://api.foursquare.com/v2/venues/explore?client_id=0LQEK2QFONRMHNYOBLU4ZEMSGKGWAB5J51O4JB0DPYRNW41G&client_secret=JYZ2IHWEDEKK5A3HNQKO4ELARI55YOJP0LFOF1NFM3R3LY5Z&v=20150901&ll=' + geolocation + '&query=drinks&limit=10&radius=1500';
     $http.get(url)
@@ -50,6 +50,7 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
     });
   };
 
+  // create markers on map
   $scope.GenerateMapMarkers = function() {
     $scope.date = Date(); // Just to show that we are updating
     var numMarkers = $scope.bars.length;
@@ -62,6 +63,26 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
     }
   };
 
+  // show info window on map
+  $scope.$on('mapInitialized', function (event, map) {
+    $scope.objMapa = map;
+  });
+
+  $scope.showInfoWindow = function (event, bar) {
+    if ($scope.infowindow) {
+      $scope.infowindow.close();
+    }
+    $scope.infowindow = new google.maps.InfoWindow();
+    var center = new google.maps.LatLng(bar.venue.location.lat,bar.venue.location.lng);
+
+    $scope.infowindow.setContent(
+      '<h7>' + bar.venue.name + '</h7>');    
+
+    $scope.infowindow.setPosition(center);
+    $scope.infowindow.open($scope.objMapa);
+  };
+
+  // get foursquare pictures
   $scope.getPictures = function (bar) {
     var foursquareId = bar.venue.id;
     // console.log(bar.venue.id);
