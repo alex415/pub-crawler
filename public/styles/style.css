@@ -1,10 +1,5 @@
 /*======= Global Styling ============*/
 
-@font-face {
-  font-family: brewmaster;
-  src: url(/fonts/brewmaster.otf);
-}
-
 *:focus {
   outline: 0 !important;
 }
