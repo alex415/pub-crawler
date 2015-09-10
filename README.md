@@ -5,5 +5,5 @@ Technologies used: Angular, Node.js, Express, Google Maps API, Foursquare API
 Heroku Link: http://pub-crawler.herokuapp.com
 
 Installation:
-Clone repo
-NPM install
++ Clone repo
++ NPM install
