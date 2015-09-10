@@ -26,6 +26,7 @@ body {
 
 .form-control {
   margin: auto;
+  max-width: 500px;
 }
 
 /*======= Search Styling ============*/
@@ -111,7 +112,7 @@ body {
 
 #main-button {
   background-color: transparent;
-  border: .1em solid #FFFFFF;
+  border: 2px solid #FFFFFF;
 }
 
 #main-button:hover {
