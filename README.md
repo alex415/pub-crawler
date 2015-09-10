@@ -1,5 +1,5 @@
 Description:
-+ Enter a location and Pub Crawler will find your recommended bars in the area.
++ Enter a location and Pub Crawler will find you recommended bars in the area.
 
 Technologies used:
 + Angular
