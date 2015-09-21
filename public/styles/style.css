@@ -1,5 +1,10 @@
 /*======= Global Styling ============*/
 
+@font-face {
+  font-family: Heineken;
+  src: url(/fonts/Heineken.ttf);
+}
+
 *:focus {
   outline: 0 !important;
 }
@@ -32,7 +37,7 @@ body {
 /*======= Search Styling ============*/
 
 #search-container {
-  padding-top: 15px;
+/*  padding-top: 15px;*/
   padding-bottom: 20px;
   text-align: center;
   width: 100%;

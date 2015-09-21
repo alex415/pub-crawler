@@ -21,6 +21,13 @@
 
 .site-logo {
   align-self: center;
+  text-align: center;
+  font-size: 90px;
+  font-family: Heineken;
+  color: white;
+
+  letter-spacing: 2.5px;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .nav {
