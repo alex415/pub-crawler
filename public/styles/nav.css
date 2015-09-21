@@ -8,16 +8,15 @@
 
 .main-header,
 .nav {
-  display: flex;
   flex-direction: column;
   width: 100%;
+  display: flex;
 }
 
 .main-header {
   padding-top: .75em;
   padding-bottom: 0em;
   background: transparent;
-/*  border: 1px solid #ccc;*/
 }
 
 .site-logo {
@@ -60,7 +59,7 @@
   }
   .nav {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   .nav a {
     border-bottom-color: transparent;
