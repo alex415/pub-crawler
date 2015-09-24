@@ -67,6 +67,7 @@ body {
   padding-bottom: 0;
   margin-bottom: 0;
   background:rgba(214, 140, 18,.7);
+  overflow-x: hidden;
 }
 
 #venue-repeat:hover {
@@ -157,6 +158,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 
 #map {
   height: 500px;
+  min-width: 470px;
 }
 
 a[href^="http://maps.google.com/maps"]{display:none !important}
