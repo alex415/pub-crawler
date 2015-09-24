@@ -25,13 +25,8 @@
   font-size: 90px;
   font-family: Heineken;
   color: white;
-
   letter-spacing: 2.5px;
   text-shadow: 3px 3px 12px rgba(0, 0, 0, 1);
-}
-
-.nav {
-/*  margin-top: 1.5em;*/
 }
 
 .nav a {
@@ -53,12 +48,10 @@
   background-color: transparent;
 }
 
-
 /*======= Media Queries ============*/
 
 @media (min-width: 769px) {
   .main-header {
-/*    height: 60px;*/
     justify-content: flex-end;
   }
   .site-logo {
@@ -74,9 +67,6 @@
 }
 
 @media (min-width: 1025px) {
-  .main-header {
-/*    flex-direction: row; align-items:*/
-  }
   .site-logo {
     align-self: center;
   }

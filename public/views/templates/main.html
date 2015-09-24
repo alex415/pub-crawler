@@ -1,15 +1,11 @@
 <!-- navbar -->
-<div class="container" id="nav-container"> <!-- start nav container -->
-  <header class="main-header"> <!-- start header -->
-    <span class="site-logo" href="/">
+<div class="container" id="nav-container">
+  <header class="main-header">
+    <div class="site-logo" href="/">
       <p>PUB CRAWLER</p>
-<!--       <img src="images/brand.png" style="width:100%"> -->
-    </span>
-    <ul class="nav"> <!-- nav links -->
-      <!-- <li><a href="/about">ABOUT</a></li> -->
-    </ul>
-  </header> <!-- end header -->
-</div> <!-- end nav container -->
+    </div>
+  </header>
+</div>
 
 <div class="container"> <!-- start of master container -->
   
@@ -25,33 +21,32 @@
     </div>
   </div>
 
-<div data-ng-if="myValue"> <!-- start hide -->
-
+  <div data-ng-if="myValue"> <!-- start hide -->
     <div class="container"> <!-- main container -->
       <div class="row"> <!-- main row -->
 
-        <!-- left view -->
-        <div class="col-xs-4" id="venue-column"> <!-- start column -->
+        <!-- left col -->
+        <div class="col-xs-4" id="venue-column">
           <div ng-repeat="bar in bars" ng-click="getPictures(bar)" class="well" id="venue-repeat">
             <li><h6><b>{{bar.venue.name}}</li></h6></b>
             <a href="{{bar.venue.url}}"><p>{{bar.venue.url}}</a></p>
             <p>{{bar.venue.contact.formattedPhone}}</p>
             <p>{{bar.venue.location.formattedAddress.join(" ")}}</p>
           </div>
-        </div> <!-- end column -->
+        </div>
 
-      <!-- map -->  
-      <div class="container">
-        <div class="col-xs-8" id="map-column"> <!-- start column -->
-          <map id="map" zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#ded7c6'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#ded7c6'}]}]">
-            <!-- markers -->
-            <marker ng-repeat="bar in bars" on-click="showInfoWindow(event, bar)" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}" icon="images/mapicon.png">
-            </marker>
-            <shape name="circle" radius="500" center="{{startLocation}}" radius="1000"></shape>
-            <marker position="{{startLocation}}" visible="true" icon="images/start.png"></marker>
-          </map>
-        </div> <!-- end column -->
-      </div>
+        <!-- right col -->
+        <div class="container">
+          <div class="col-xs-8" id="map-column">
+            <map id="map" zoom-to-include-markers='auto' styles="[{stylers:[{hue:'#ded7c6'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#ded7c6'}]}]">
+              <!-- markers -->
+              <marker ng-repeat="bar in bars" on-click="showInfoWindow(event, bar)" position="{{bar.venue.location.lat}},{{bar.venue.location.lng}}" icon="images/mapicon.png">
+              </marker>
+              <shape name="circle" radius="500" center="{{startLocation}}" radius="1000"></shape>
+              <marker position="{{startLocation}}" visible="true" icon="images/start.png"></marker>
+            </map>
+          </div>
+        </div>
 
       </div> <!-- end of main row -->
     </div> <!-- end of main container -->
@@ -69,9 +64,6 @@
         </div>
       </div>
     </div>
+  </div> <!-- end hide -->
 
-  </div> <!-- end of master container -->
-
-</div> <!-- end hide -->
-
-<br><br>
+</div> <!-- end of master container -->

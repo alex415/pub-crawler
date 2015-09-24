@@ -6,14 +6,10 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
       templateUrl: 'views/templates/main.html',
       controller: 'MainCtrl'
     })
-    .when('/about', {
-      templateUrl: 'views/templates/about.html',
-      controller: 'MainCtrl'
-    })
     .otherwise({
       redirectTo: '/'
     });
-    
+
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false
@@ -21,27 +17,26 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
   }])
 
 .controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
-  // map markers
-  var markers = [];
+
   $scope.myValue = false;
+  var markers = [];
 
   $scope.submit = function () {
 
-    // start icon location
+    // starting icon location
     var geolocation = $scope.details.geometry.location.toString().replace(/\s+/, '').slice(1, -1);
 
-    // send location to foursquare
+    // send user's location to foursquare API
     $scope.startLocation = $scope.details.geometry.location.toString().replace(/\s+/, '').slice(1, -1);
     var url = 'https://api.foursquare.com/v2/venues/explore?client_id=0LQEK2QFONRMHNYOBLU4ZEMSGKGWAB5J51O4JB0DPYRNW41G&client_secret=JYZ2IHWEDEKK5A3HNQKO4ELARI55YOJP0LFOF1NFM3R3LY5Z&v=20150901&ll=' + geolocation + '&query=drinks&limit=10&radius=1500';
     $http.get(url)
       .then(function (response) {
-        // console.log(response.data.response.groups[0].items);
         $scope.bars = response.data.response.groups[0].items;
-        
+
         // loop map markers
         for (var i=0; i < $scope.bars.length; i++) {
           markers[i] = new google.maps.Marker({
-            title: "Hi marker " + i
+            // title: "Hi marker" + i
           });
         }
 
@@ -52,7 +47,6 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
 
   // create markers on map
   $scope.GenerateMapMarkers = function() {
-    $scope.date = Date(); // Just to show that we are updating
     var numMarkers = $scope.bars.length;
     for (i = 0; i < numMarkers; i++) {
       var lat = $scope.bars[i].venue.location.lat;
@@ -63,7 +57,7 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
     }
   };
 
-  // show info window on map
+  // create info window on map
   $scope.$on('mapInitialized', function (event, map) {
     $scope.objMapa = map;
   });
@@ -86,12 +80,11 @@ angular.module('pubCrawl', ['ngAutocomplete', 'ngMap', 'ngRoute'])
   // get foursquare pictures
   $scope.getPictures = function (bar) {
     var foursquareId = bar.venue.id;
-    // console.log(bar.venue.id);
     var url = 'https://api.foursquare.com/v2/venues/' + foursquareId +'/photos?client_id=0LQEK2QFONRMHNYOBLU4ZEMSGKGWAB5J51O4JB0DPYRNW41G&client_secret=JYZ2IHWEDEKK5A3HNQKO4ELARI55YOJP0LFOF1NFM3R3LY5Z&v=20150901';
     $http.get(url)
       .then(function (response) {
-        // console.log(response);
         $scope.pictures = response.data.response.photos.items;
     });
   };
-}]); // end
+
+}]);

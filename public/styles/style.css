@@ -10,7 +10,7 @@
 }
 
 a {
-  color: #000000;
+  color: rgba(0, 0, 0, 1);
 }
 
 body {
@@ -37,7 +37,6 @@ body {
 /*======= Search Styling ============*/
 
 #search-container {
-/*  padding-top: 15px;*/
   padding-bottom: 20px;
   text-align: center;
   width: 100%;
@@ -49,8 +48,6 @@ body {
 #venue-column {
   padding-left: 0px;
   padding-right: 0px;
-
-/*  width: 370px;*/
   height: 500px;
   overflow-x: auto;
 }
@@ -80,6 +77,7 @@ body {
 #foursquare-pictures {
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 20px;
 }
 
 .col-lg-12 {
@@ -101,7 +99,6 @@ body {
 
 .cover-container {
   height: 183px;
-/*  width: auto;*/
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
@@ -109,7 +106,6 @@ body {
 .cover-item {
   display: inline-block;
   margin: 8px 8px;
-/*  box-shadow: 2px 2px 4px #bbb;*/
   width: 183px;
   height: 183px;
 }
@@ -136,23 +132,6 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
   border-color: rgba(70, 70, 70, .1);
   box-shadow: 0 1px 1px rgba(214, 140, 18, 1) inset, 0 0 8px rgba(214, 140, 18, 1);
 }
-
-/*======= Scroll Bar Styling ============*/
-
-/*::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
-  height: 7px;
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0,0,0,.5);
-  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-}
-
-::-webkit-scrollbar-track { 
-  background-color: #fff; 
-}*/
 
 /*======= Map Styling ============*/
 

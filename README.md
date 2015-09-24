@@ -5,6 +5,7 @@ Technologies used:
 + Angular
 + Node.js
 + Express
++ Google Places API
 + Google Maps API
 + Foursquare API
 
