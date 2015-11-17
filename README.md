@@ -1,17 +1,17 @@
-Description:
-+ Enter a location and Pub Crawler will find you recommended bars in the area.
+# Pub Crawler
+http://pub-crawler.herokuapp.com
 
-Technologies used:
-+ Angular
-+ Node.js
-+ Express
-+ Google Places API
-+ Google Maps API
-+ Foursquare API
+## Overview
+A web app that searches for top bars in a given area and places them on a map as a recommended bar hopping route.
 
-Heroku Link:
-+ http://pub-crawler.herokuapp.com
+## Installation
+1. Clone repo
+2. NPM install
 
-Installation:
-+ Clone repo
-+ NPM install
+## Technologies used:
+* AngularJS
+* Node.js
+* Express
+* Google Places API
+* Google Maps API
+* Foursquare API
