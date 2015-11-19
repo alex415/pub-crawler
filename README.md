@@ -2,7 +2,7 @@
 http://pub-crawler.herokuapp.com
 
 ## Overview
-#### This repository is no longer active and the project is being recreated.
+#### This repository is no longer active and the project is being recreated at https://github.com/alex415/pub-crawler-v2
 A web app that searches for top bars in a given area and places them on a map as a recommended bar hopping route.
 
 ## Installation
